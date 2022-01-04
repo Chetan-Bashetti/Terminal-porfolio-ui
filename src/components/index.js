@@ -144,6 +144,7 @@ const PortalHome = () => {
 			setCommand('');
 		}
 	};
+
 	return (
 		<Wrapper>
 			<HeaderTextWrapper>Welcome to my portfolio</HeaderTextWrapper>
@@ -159,7 +160,6 @@ const PortalHome = () => {
 						changeCommand={(e) => handleCommand(e)}
 						keyPress={(e) => handleFilterKeyPress(e)}
 						id={'getInfo'}
-						autocomplete='off'
 					/>
 				</Prompt>
 			</DevInfo>
