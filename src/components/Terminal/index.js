@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 //Importing components
-import Commands from 'components/Commands';
-import Input from 'components/Input';
-import Result from 'components/Result';
-import About from 'components/About';
-import Skills from 'components/Skills';
-import Experinace from 'components/Experiance';
-import Education from 'components/Education';
-import Contact from 'components/Contact';
-import SocialLinks from 'components/SocialLinks';
-import Modal from 'components/Modal';
+import Commands from 'components/Terminal/Commands';
+import Input from 'components/Terminal/Input';
+import Result from 'components/Terminal/Result';
+import About from 'components/Terminal/About';
+import Skills from 'components/Terminal/Skills';
+import Experinace from 'components/Terminal/Experiance';
+import Education from 'components/Terminal/Education';
+import Contact from 'components/Terminal/Contact';
+import SocialLinks from 'components/Terminal/SocialLinks';
+import Modal from 'components/Terminal/Modal';
 
 //Importing Store
 import STORE from 'store';
@@ -26,6 +26,17 @@ const Wrapper = styled.div`
 	@media (max-width: 799px) {
 		padding: 2em 3%;
 	}
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: black;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: limegreen;
+	}
 `;
 
 const HeaderTextWrapper = styled.div`
@@ -34,6 +45,7 @@ const HeaderTextWrapper = styled.div`
 	font-size: 2em;
 	@media (max-width: 799px) {
 		font-size: 1.5em;
+		margin-top: 2em;
 	}
 `;
 
@@ -50,7 +62,39 @@ const PromptResult = styled.div`
 	display: flex;
 `;
 
-const PortalHome = () => {
+const StyledLink = styled.div`
+	color: limegreen;
+	background: none;
+	border: none;
+	box-shadow: none;
+	font-weight: bold;
+	font-size: 1.5em;
+	font-family: monospace;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: flex;
+	background: black;
+	@media only screen and (max-width: 699px) {
+		right: 0px;
+		top: 0px;
+		padding: 1em;
+		width: -webkit-fill-available;
+		align-items: center;
+		justify-content: center;
+	}
+`;
+
+const GradientText = styled.div`
+	background-image: linear-gradient(45deg, #ff4e50, #f9d423);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+	margin-left: 0.5em;
+`;
+
+const PortalHome = ({ setSiteState }) => {
 	const [command, setCommand] = useState('');
 	const [components, setComponents] = useState([]);
 	const [visitor, setVisitor] = useState('');
@@ -171,6 +215,10 @@ const PortalHome = () => {
 					closeModal={closeModal}
 				/>
 			)}
+			<StyledLink onClick={() => setSiteState('gui')}>
+				Switch to
+				<GradientText>GUI</GradientText>
+			</StyledLink>
 		</Wrapper>
 	);
 };

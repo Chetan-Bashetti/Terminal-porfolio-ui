@@ -70,6 +70,33 @@ const STORE = {
 			platform: 'Github',
 			link: 'https://github.com/Chetan-Bashetti'
 		}
+	],
+	GUI_ROUTES: [
+		{
+			label: 'Home',
+			to: 'home',
+			icon: 'home'
+		},
+		{
+			label: 'About',
+			to: 'about',
+			icon: 'person'
+		},
+		{
+			label: 'Skills',
+			to: 'skills',
+			icon: 'computer'
+		},
+		{
+			label: 'Work',
+			to: 'work',
+			icon: 'business_center'
+		},
+		{
+			label: 'Contact',
+			to: 'contact',
+			icon: 'call'
+		}
 	]
 };
 export default STORE;
