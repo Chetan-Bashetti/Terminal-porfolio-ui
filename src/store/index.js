@@ -53,7 +53,7 @@ const STORE = {
 			period: 'August 2018 - December 2020'
 		},
 		{
-			org: 'ViitorCloud Technologies, Ahmedabad',
+			org: 'Vittor Cloud Technologies, Ahmedabad',
 			desg: 'Software Developer',
 			period: 'Februry 2021 - Present'
 		}

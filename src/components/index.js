@@ -144,7 +144,6 @@ const PortalHome = () => {
 			setCommand('');
 		}
 	};
-
 	return (
 		<Wrapper>
 			<HeaderTextWrapper>Welcome to my portfolio</HeaderTextWrapper>
@@ -154,7 +153,7 @@ const PortalHome = () => {
 					<Result command={command} components={components} user={user} />
 				</PromptResult>
 				<Prompt>
-					{user ? user : 'anonymous'}@chetan_dev_portal_&gt;{' '}
+					{user ? user : 'anonymous'} @chetan_dev_portal_&gt;
 					<Input
 						inputValue={command}
 						changeCommand={(e) => handleCommand(e)}
