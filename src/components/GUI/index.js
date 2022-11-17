@@ -12,6 +12,7 @@ const Wrapper = styled.div`
 	display: flex;
 	flex: 1;
 	background: #f7f7f7;
+	font-family: 'Lato', sans-serif;
 	@media only screen and (max-width: 1340px) {
 		flex-direction: column-reverse;
 	}

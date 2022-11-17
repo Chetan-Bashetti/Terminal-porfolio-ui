@@ -32,8 +32,8 @@ const EachLink = styled.div`
 	background: ${(props) => (props.bg ? props.bg : '')};
 	text-transform: uppercase;
 	&:hover {
-		hox-shadow: 0 14px 28px rgb(0 0 0 / 20%);
 		background: #a7a4a466;
+		box-shadow: 0px 8px 16px #464646;
 	}
 	@media only screen and (min-width: 599px) {
 		padding: 20px;
@@ -44,6 +44,7 @@ const EachLink = styled.div`
 const EachLinkText = styled.div`
 	color: white;
 	margin-left: 1em;
+
 	@media only screen and (max-width: 1239px) {
 		display: none;
 	}

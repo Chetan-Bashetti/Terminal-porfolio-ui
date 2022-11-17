@@ -43,6 +43,9 @@ const EachLink = styled.a`
 	display: flex;
 	margin: 0 0.5em;
 	cursor: pointer;
+	&:hover {
+		box-shadow: 5px 14px 28px rgb(134 151 168 / 20%);
+	}
 	@media only screen and (max-width: 599px) {
 		margin-top: 1em;
 	}

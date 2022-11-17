@@ -70,7 +70,7 @@ const EachSkill = styled.div`
 
 	transition: all 0.3s ease-in;
 	&:hover {
-		transform: scale(1.1);
+		box-shadow: 5px 14px 28px rgb(134 151 168 / 20%);
 	}
 `;
 
