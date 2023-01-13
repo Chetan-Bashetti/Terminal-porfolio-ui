@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import Sidebar from './SideBar';
@@ -31,15 +31,15 @@ const SwicthButton = styled.div`
 	border: none;
 	background: black;
 	color: limegreen;
-	padding: 0.5em 1em;
-	border-radius: 2px;
+	padding: 1em;
 	position: absolute;
 	right: 10px;
-	top: 10px;
+	bottom: 10px;
 	text-transform: uppercase;
 	cursor: pointer;
 	font-family: monospace;
 	font-size: 1.2em;
+	border-radius: ${(props) => (props.radius ? props.radius : '')};
 	@media only screen and (max-width: 699px) {
 		right: 0px;
 		top: 0px;
@@ -49,17 +49,43 @@ const SwicthButton = styled.div`
 `;
 
 const GuiPortal = ({ setSiteState }) => {
+	const [hovered, setHovered] = useState(false);
 	return (
 		<Wrapper>
 			<Sidebar setSiteState={setSiteState} />
 			<ContentWrapper>
-				<SwicthButton
-					onClick={() => {
-						setSiteState('terminal');
-					}}
-				>
-					Switch to terminal _&gt;
-				</SwicthButton>
+				{hovered ? (
+					<SwicthButton
+						onClick={() => {
+							setSiteState('terminal');
+						}}
+						onMouseOver={() => {
+							setHovered(true);
+						}}
+						onMouseOut={() => {
+							setHovered(false);
+						}}
+						radius='25px'
+					>
+						Switch to terminal _&gt;
+					</SwicthButton>
+				) : (
+					<SwicthButton
+						onClick={() => {
+							setSiteState('terminal');
+						}}
+						onMouseOver={() => {
+							setHovered(true);
+						}}
+						onMouseOut={() => {
+							setHovered(false);
+						}}
+						radius='50%'
+					>
+						_&gt;
+					</SwicthButton>
+				)}
+
 				<Home />
 				<About />
 				<Skills />
