@@ -41,10 +41,12 @@ const SwicthButton = styled.div`
 	font-size: 1.2em;
 	border-radius: ${(props) => (props.radius ? props.radius : '')};
 	@media only screen and (max-width: 699px) {
-		right: 0px;
-		top: 0px;
-		width: 100%;
+		right: 10px;
+		top: 10px;
 		padding: 1em;
+		background: limegreen;
+		color: black;
+		height: fit-content;
 	}
 `;
 
