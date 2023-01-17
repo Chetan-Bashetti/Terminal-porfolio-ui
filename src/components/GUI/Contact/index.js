@@ -75,13 +75,13 @@ const Contact = () => {
 								style={{ width: 20 }}
 							/>
 						</EachLink>
-						<EachLink href='https://twitter.com/CBashetti' target='_blank'>
+						{/* <EachLink href='https://twitter.com/CBashetti' target='_blank'>
 							<img
 								src={require('../../../assets/icons/twitter.svg')}
 								alt='twitter'
 								style={{ width: 20 }}
 							/>
-						</EachLink>
+						</EachLink> */}
 						<EachLink href='mailto:chetankb619@gmail.com' target='_blank'>
 							<img
 								src={require('../../../assets/icons/mail.svg')}

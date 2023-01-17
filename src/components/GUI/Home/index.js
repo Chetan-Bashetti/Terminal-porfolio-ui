@@ -237,7 +237,7 @@ const Home = () => {
 											style={{ width: 20 }}
 										/>
 									</EachLink>
-									<EachLink
+									{/* <EachLink
 										href='https://twitter.com/CBashetti'
 										target='_blank'
 									>
@@ -246,7 +246,7 @@ const Home = () => {
 											alt='twitter'
 											style={{ width: 20 }}
 										/>
-									</EachLink>
+									</EachLink> */}
 								</Links>
 							</LinksWrapper>
 						</DevInfo>
