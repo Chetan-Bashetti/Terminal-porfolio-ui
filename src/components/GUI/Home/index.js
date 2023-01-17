@@ -247,6 +247,13 @@ const Home = () => {
 											style={{ width: 20 }}
 										/>
 									</EachLink> */}
+									<EachLink href='mailto:chetankb619@gmail.com' target='_blank'>
+										<img
+											src={require('../../../assets/icons/mail.svg')}
+											alt='twitter'
+											style={{ width: 20 }}
+										/>
+									</EachLink>
 								</Links>
 							</LinksWrapper>
 						</DevInfo>
