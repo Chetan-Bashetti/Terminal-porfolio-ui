@@ -58,7 +58,12 @@ const STORE = {
 		{
 			org: 'Vittor Cloud Technologies, Ahmedabad',
 			desg: 'Software Developer',
-			period: 'Februry 2021 - Present'
+			period: 'Februry 2021 - April 2023'
+		},
+		{
+			org: 'Virtusa, Kuala lumpur, Malayasia',
+			desg: 'Senior Software Engineer',
+			period: 'June 2023 - Present'
 		}
 	],
 	SOCIAL_LINKS: [
