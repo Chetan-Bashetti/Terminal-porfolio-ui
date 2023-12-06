@@ -203,13 +203,14 @@ const Home = () => {
 								<DevFirstName>Bashetti</DevFirstName>
 							</DevName>
 							<DevAbout>
-								Bangalore based{' '}
+								Bangalore-based{' '}
 								<span
 									style={{ color: 'black', textTransform: 'uppercase' }}
 								></span>
-								FRONT-END DEVELOPER, With 4 years of industry experience, I love
-								to code, develop scalable user interfaces, and find solutions to
-								complex problems
+								<b>SENIOR SOFTWARE ENGINEER</b> (Currently in Kuala Lumpur,
+								Malaysia), With 5 years of industry experience, I love to code,
+								develop scalable user interfaces, and find solutions to complex
+								problems
 							</DevAbout>
 							<LinksWrapper>
 								<a href={Pdf} rel='noopener noreferrer' target='_blank'>
@@ -237,16 +238,6 @@ const Home = () => {
 											style={{ width: 20 }}
 										/>
 									</EachLink>
-									{/* <EachLink
-										href='https://twitter.com/CBashetti'
-										target='_blank'
-									>
-										<img
-											src={require('../../../assets/icons/twitter.svg')}
-											alt='twitter'
-											style={{ width: 20 }}
-										/>
-									</EachLink> */}
 									<EachLink href='mailto:chetankb619@gmail.com' target='_blank'>
 										<img
 											src={require('../../../assets/icons/mail.svg')}

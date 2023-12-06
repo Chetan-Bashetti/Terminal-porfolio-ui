@@ -39,8 +39,12 @@ const STORE = {
 			info: 'chetankb619@gmail.com'
 		},
 		{
-			medium: 'phone',
+			medium: 'phone - India',
 			info: '+91 8495011619'
+		},
+		{
+			medium: 'phone - Malaysia',
+			info: '+60 018 9474 651'
 		}
 	],
 	ABOUT: {

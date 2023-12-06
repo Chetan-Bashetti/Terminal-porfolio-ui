@@ -12,21 +12,19 @@ const Wrapper = styled.div`
 const ContactWrapper = styled.div`
 	display: flex;
 	padding: 1em;
+	flex-direction: column;
 `;
 const LinksWrapper = styled.div`
 	display: flex;
 	align-items: center;
-	@media only screen and (max-width: 599px) {
-		flex-direction: column;
-	}
+	flex-direction: column;
 `;
 
 const Links = styled.div`
 	display: flex;
-	margin-left: 2em;
-	@media only screen and (max-width: 599px) {
-		margin-left: 0em;
-	}
+	margin-bottom: 2em;
+	flex-wrap: wrap;
+	justify-content: center;
 `;
 
 const EachLink = styled.a`
@@ -46,15 +44,30 @@ const EachLink = styled.a`
 	&:hover {
 		box-shadow: 5px 14px 28px rgb(134 151 168 / 20%);
 	}
-	@media only screen and (max-width: 599px) {
-		margin-top: 1em;
-	}
+	margin-top: 1em;
+`;
+
+const EachLinkContact = styled(EachLink)`
+	color: #007acc;
+	text-decoration: none;
 `;
 
 const Contact = () => {
 	return (
 		<Wrapper id='contact'>
 			<ContactWrapper>
+				<LinksWrapper>
+					<div>Got an exiting offer for me? let's discuss over a call</div>
+					<Links>
+						<EachLinkContact href='tel:+600189474651' target='_blank'>
+							Malaysia: +60 018 9474 651
+						</EachLinkContact>
+						<EachLinkContact href='tel:+918495011619' target='_blank'>
+							India: +91 8495011619
+						</EachLinkContact>
+					</Links>
+				</LinksWrapper>
+
 				<LinksWrapper>
 					<div>Connect with me</div>
 					<Links>
@@ -75,13 +88,6 @@ const Contact = () => {
 								style={{ width: 20 }}
 							/>
 						</EachLink>
-						{/* <EachLink href='https://twitter.com/CBashetti' target='_blank'>
-							<img
-								src={require('../../../assets/icons/twitter.svg')}
-								alt='twitter'
-								style={{ width: 20 }}
-							/>
-						</EachLink> */}
 						<EachLink href='mailto:chetankb619@gmail.com' target='_blank'>
 							<img
 								src={require('../../../assets/icons/mail.svg')}
