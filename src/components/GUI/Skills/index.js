@@ -48,6 +48,7 @@ const DevBrief = styled.div`
 	text-align: left;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 `;
 
 const EachSkill = styled.div`

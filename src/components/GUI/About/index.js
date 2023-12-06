@@ -47,7 +47,7 @@ const DevBrief = styled.div`
 	min-width: 250px;
 	line-height: 1.4;
 	margin-bottom: 1em;
-	text-align: left;
+	text-align: center;
 `;
 
 const About = () => {

@@ -7,6 +7,7 @@ import About from './About';
 import Skills from './Skills';
 import Contact from './Contact';
 import Work from './Work';
+import Experiance from './Experience';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -90,6 +91,7 @@ const GuiPortal = ({ setSiteState }) => {
 
 				<Home />
 				<About />
+				<Experiance />
 				<Skills />
 				<Work />
 				<Contact />
