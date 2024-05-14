@@ -187,6 +187,7 @@ const Home = () => {
 							<img
 								src={require('../../../assets/chetan.jpeg')}
 								alt='chetan k b'
+								loading='lazy'
 								style={{
 									borderRadius: '50%',
 									height: 'inherit',
