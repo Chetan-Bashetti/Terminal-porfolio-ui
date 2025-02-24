@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { ReactComponent as LinkedInSvg } from 'assets/icons/linkedin.svg';
+import { ReactComponent as MailSvg } from 'assets/icons/mail.svg';
+import { ReactComponent as GitHubSvg } from 'assets/icons/github.svg';
+
 const Wrapper = styled.div`
 	display: flex;
 	margin-bottom: 3em;
@@ -72,28 +76,16 @@ const Contact = () => {
 					<div>Connect with me</div>
 					<Links>
 						<EachLink href='https://github.com/Chetan-Bashetti' target='_blank'>
-							<img
-								src={require('../../../assets/icons/github.svg')}
-								alt='twitter'
-								style={{ width: 20 }}
-							/>
+							<GitHubSvg style={{ width: 20 }} />
 						</EachLink>
 						<EachLink
 							href='https://www.linkedin.com/in/chetan-bashetti/'
 							target='_blank'
 						>
-							<img
-								src={require('../../../assets/icons/linkedin.svg')}
-								alt='twitter'
-								style={{ width: 20 }}
-							/>
+							<LinkedInSvg style={{ width: 20 }} />
 						</EachLink>
 						<EachLink href='mailto:chetankb619@gmail.com' target='_blank'>
-							<img
-								src={require('../../../assets/icons/mail.svg')}
-								alt='twitter'
-								style={{ width: 20 }}
-							/>
+							<MailSvg style={{ width: 20 }} />
 						</EachLink>
 					</Links>
 				</LinksWrapper>
