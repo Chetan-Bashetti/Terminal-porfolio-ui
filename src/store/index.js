@@ -55,9 +55,14 @@ const STORE = {
 	},
 	EXPERIANCE: [
 		{
-			org: 'Rayabhari Technologies, Bangalore.',
-			desg: 'Software Developer',
-			period: 'August 2018 - December 2020'
+			org: 'HCL Technologies Sdn Bhd, Kuala lumpur, Malayasia',
+			desg: 'Tech Lead',
+			period: 'September 2024 - Present'
+		},
+		{
+			org: 'Virtusa Malaysia Sdn Bhd, Kuala lumpur, Malayasia',
+			desg: 'Senior Software Engineer',
+			period: 'June 2023 - July 2024'
 		},
 		{
 			org: 'Vittor Cloud Technologies, Ahmedabad',
@@ -65,9 +70,9 @@ const STORE = {
 			period: 'Februry 2021 - April 2023'
 		},
 		{
-			org: 'Virtusa, Kuala lumpur, Malayasia',
-			desg: 'Senior Software Engineer',
-			period: 'June 2023 - Present'
+			org: 'Rayabhari Technologies, Bangalore.',
+			desg: 'Software Developer',
+			period: 'August 2018 - December 2020'
 		}
 	],
 	SOCIAL_LINKS: [
@@ -109,7 +114,32 @@ const STORE = {
 	],
 	experienceData: [
 		{
-			companyName: 'Virtusa',
+			companyName: 'HCL Technologies Sdn Bhd',
+			title: 'Tech Lead',
+			location:
+				'Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia · On-site',
+			period: '23rd Sept, 2024 - Present,',
+			startYear: 2024,
+			clients: [
+				{
+					workDesc:
+						'Worked as Tech lead to manage UI work related to HSBC bank',
+					techStack: [
+						'React.Js',
+						'TypeScript',
+						'JavaScript',
+						'SCSS',
+						'ExpressJs',
+						'Lightning Web Components',
+						'React Testing Library',
+						'Jest'
+					],
+					tools: ['BitBucket', 'Azure Dev Ops(ADO)', 'Jira']
+				}
+			]
+		},
+		{
+			companyName: 'Virtusa Malaysia Sdn Bhd',
 			title: 'Senior Software Engineer',
 			location:
 				'Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia · On-site',
