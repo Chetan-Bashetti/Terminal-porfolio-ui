@@ -143,7 +143,7 @@ const STORE = {
 			title: 'Senior Software Engineer',
 			location:
 				'Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia · On-site',
-			period: '26th June, 2023 - Present,',
+			period: '26th June, 2023 - 5th July, 2024,',
 			startYear: 2023,
 			clients: [
 				{
