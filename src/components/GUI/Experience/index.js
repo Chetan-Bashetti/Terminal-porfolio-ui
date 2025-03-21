@@ -117,13 +117,13 @@ color: white;
 }
 `;
 
-const Experience = () => {
+const Experience = ({ viewMode }) => {
 	return (
 		<Wrapper id='Experience'>
 			<ExperienceWrapper>
 				<Title>
 					<TitleText>My</TitleText>
-					<div>Experience</div>
+					<div style={{ color: viewMode && 'darkgray' }}>Experience</div>
 				</Title>
 				<DevBrief>
 					{STORE?.experienceData.map((eachExp) => (

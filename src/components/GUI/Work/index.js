@@ -145,7 +145,7 @@ const GitHubLink = styled.div`
 	text-align: center;
 `;
 
-const Work = () => {
+const Work = ({ viewMode }) => {
 	const skills = [
 		{
 			label: 'React form builder',
@@ -192,7 +192,7 @@ const Work = () => {
 			<AboutWrapper>
 				<Title>
 					<TitleText>My</TitleText>
-					<div>work</div>
+					<div style={{ color: viewMode && 'darkgray' }}>work</div>
 				</Title>
 				<DevBrief>
 					{skills?.map((eachSkill, id) => (

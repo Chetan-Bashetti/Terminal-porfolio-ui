@@ -82,7 +82,7 @@ const SkillLabel = styled.div`
 	letter-spacing: 0;
 `;
 
-const Skills = () => {
+const Skills = ({ viewMode }) => {
 	const skills = [
 		{
 			label: 'HTML',
@@ -146,7 +146,7 @@ const Skills = () => {
 			<AboutWrapper>
 				<Title>
 					<TitleText>My</TitleText>
-					<div>skills</div>
+					<div style={{ color: viewMode && 'darkgray' }}>skills</div>
 				</Title>
 				<DevBrief>
 					{skills?.map((eachSkill, id) => (

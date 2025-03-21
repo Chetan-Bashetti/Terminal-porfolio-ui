@@ -15,4 +15,8 @@ body {
 #root {
 	height: 100%;
 	width: 100%;
+	--text-color-dark: black;
+	--bg-color-dark: #0d0d0d;
+	--text-color-light: white;
+	--bg-color-light: white;
 }

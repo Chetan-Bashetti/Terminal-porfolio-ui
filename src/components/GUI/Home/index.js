@@ -181,7 +181,7 @@ const EachLink = styled.a`
 	}
 `;
 
-const Home = () => {
+const Home = ({ viewMode }) => {
 	return (
 		<div id='home'>
 			<Wrapper>
@@ -202,9 +202,11 @@ const Home = () => {
 					</DevDataWrapper>
 					<DevDataWrapper align={'flex-start'}>
 						<DevInfo>
-							<DevIntro>HEY THERE VISITOR, I'M</DevIntro>
+							<DevIntro style={{ color: viewMode && 'darkgray' }}>
+								HEY THERE VISITOR, I'M
+							</DevIntro>
 							<DevName>
-								<div>chetan</div>
+								<div style={{ color: viewMode && 'darkgray' }}>chetan</div>
 								<DevFirstName>Bashetti</DevFirstName>
 							</DevName>
 							<DevAbout>

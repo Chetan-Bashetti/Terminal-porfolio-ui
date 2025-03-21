@@ -50,13 +50,13 @@ const DevBrief = styled.div`
 	text-align: center;
 `;
 
-const About = () => {
+const About = ({ viewMode }) => {
 	return (
 		<Wrapper id='about'>
 			<AboutWrapper>
 				<Title>
 					<TitleText>About</TitleText>
-					<div>Me</div>
+					<div style={{ color: viewMode && 'darkgray' }}>Me</div>
 				</Title>
 				<DevBrief>
 					I started my carrier as a{' '}
