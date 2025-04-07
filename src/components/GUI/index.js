@@ -43,8 +43,8 @@ const SwicthButton = styled.div`
 	font-size: 1.2em;
 	border-radius: ${(props) => (props.radius ? props.radius : '')};
 	@media only screen and (max-width: 699px) {
-		right: 10px;
-		top: 10px;
+		right: 0px;
+		bottom: 65px;
 		padding: 1em;
 		background: limegreen;
 		color: black;
@@ -57,6 +57,10 @@ const ViewModeWrapper = styled.div`
 	top: 30px;
 	right: 50px;
 	cursor: pointer;
+	@media only screen and (max-width: 699px) {
+		right: 15px;
+		top: 15px;
+	}
 `;
 
 const GuiPortal = ({ setSiteState }) => {
@@ -72,7 +76,9 @@ const GuiPortal = ({ setSiteState }) => {
 						className='material-symbols-outlined'
 						style={{
 							transition: 'all 0.3s ease-in',
-							fontSize: '2.5em'
+							fontSize: '2.5em',
+							color: 'white',
+							mixBlendMode: 'difference'
 						}}
 						onClick={() => setViewMode(true)}
 					>
@@ -84,7 +90,8 @@ const GuiPortal = ({ setSiteState }) => {
 						style={{
 							transition: 'all 0.3s ease-in',
 							fontSize: '2.5em',
-							color: 'white'
+							color: 'white',
+							mixBlendMode: 'difference'
 						}}
 						onClick={() => setViewMode(false)}
 					>
