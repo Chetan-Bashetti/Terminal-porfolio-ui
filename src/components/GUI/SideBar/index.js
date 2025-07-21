@@ -33,7 +33,6 @@ const EachLink = styled.div`
 	text-transform: uppercase;
 	&:hover {
 		background: #a7a4a466;
-		box-shadow: 0px 8px 16px #464646;
 	}
 	@media only screen and (min-width: 599px) {
 		padding: 20px;
