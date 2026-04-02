@@ -1,0 +1,11 @@
+{
+  "eslint.nodePath": "./node_modules",
+  "eslint.options": {
+    "resolvePluginsRelativeTo": "."
+  },
+  "eslint.useFlatConfig": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact"
+  ]
+}
