@@ -1,6 +1,6 @@
 // review.js
-import fetch from "node-fetch";
-import { execSync } from "child_process";
+const fetch = require("node-fetch");
+const { execSync } = require("child_process");
 
 // GitHub provides these automatically in Actions
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
