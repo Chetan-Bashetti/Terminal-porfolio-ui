@@ -1,0 +1,40 @@
+name: Security Scan & Email Report
+
+on:
+  push:
+    branches: [main, develop]
+
+jobs:
+  cycode-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Cycode CLI
+        run: npm install -g @cycode/cli
+
+      - name: Run Cycode Scan & Save Report
+        env:
+          CYCODE_API_KEY: ${{ secrets.CYCODE_API_KEY }}
+        run: |
+          cycode scan --output json > cycode-report.json
+
+      - name: Convert Report to HTML (Optional but nicer)
+        run: |
+          npm install -g json2html
+          json2html -i cycode-report.json -o report.html
+
+      - name: Send Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: '🚨 Cycode Security Report - ${{ github.repository }}'
+          to: your-email@example.com
+          from: your-email@example.com
+          body: 'Please find attached the latest security scan report.'
+          attachments: report.html
