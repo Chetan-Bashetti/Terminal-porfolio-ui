@@ -8,7 +8,7 @@ function CrappyButton(props) {
 
   return (
     <button
-      style={{ backgroundColor: "red", color: "white", padding: "20px" }} // Bad: inline styles
+      style={{ backgroundColor: "green", color: "white", padding: "20px" }} // Bad: inline styles
       onClick={handleClick}
     >
       Click Me
