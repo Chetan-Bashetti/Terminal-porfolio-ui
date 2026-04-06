@@ -2,13 +2,17 @@ name: AI PR Review
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   ai-review:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # 🔥 Required for git diff
 
       - name: Setup Node
         uses: actions/setup-node@v3
@@ -18,8 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm install node-fetch
 
-      - name: AI PR Review
+      - name: Run AI PR Review
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # default GitHub token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
         run: node review.js
