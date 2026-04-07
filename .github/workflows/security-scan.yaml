@@ -2,23 +2,28 @@ name: AI PR Review
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, synchronize, reopened]
 
 jobs:
-  review:
+  ai-review:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # 🔥 Required for git diff
 
-      - name: Get PR diff
-        run: |
-          git fetch origin ${{ github.base_ref }}
-          git diff origin/${{ github.base_ref }} > pr.diff
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-      - name: Run AI Review
+      - name: Install dependencies
+        run: npm install node-fetch
+
+      - name: Run AI PR Review
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          node review.js
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+        run: node review.js
